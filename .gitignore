@@ -1,16 +1,11 @@
-# Node and Angular
-Frontend\Angular\flight-hunter/node_modules/
-Frontend\Angular\flight-hunter/dist/
-Frontend\Angular\flight-hunter/.angular/
-Frontend\Angular\flight-hunter/.vscode/
+# Angular
+**/node_modules/
+**/dist/
+**/.angular/
+**/.vscode/
 
 # .NET
-backend/bin/
-backend/obj/
-backend/.vs/
-backend/*.user
-
-# OS & editor
-.DS_Store
-Thumbs.db
-*.log 
+**/bin/
+**/obj/
+**/.vs/
+**/*.user
