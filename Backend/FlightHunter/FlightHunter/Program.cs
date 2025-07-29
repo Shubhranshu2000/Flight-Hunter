@@ -12,6 +12,16 @@ namespace FlightHunter
 
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("MyCors", builder =>
+                {
+                    builder.WithOrigins("")
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                });
+            });
+
             var app = builder.Build();
 
             app.UseSwagger();
@@ -22,6 +32,7 @@ namespace FlightHunter
 
             app.MapControllers();
 
+            app.UseCors("MyCors");
 
             app.MapGet("/", context =>
             {
