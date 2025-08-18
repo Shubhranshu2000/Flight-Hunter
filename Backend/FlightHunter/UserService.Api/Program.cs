@@ -25,7 +25,19 @@ namespace UserService.Api
                 });
             });
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("MyCors", options =>
+                {
+                    options.WithOrigins("http://localhost:4200").
+                            AllowAnyHeader().
+                            AllowAnyMethod();
+                });
+            });
+
             var app = builder.Build();
+
+            app.UseCors("MyCors");
 
             app.UseSwagger();
 

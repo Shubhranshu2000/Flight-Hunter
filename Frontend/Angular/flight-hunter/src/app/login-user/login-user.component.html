@@ -1,0 +1,49 @@
+<form [formGroup]="loginForm" class="w-50 mx-auto" (ngSubmit) = "onSubmit()">
+  <div>
+    <h1 class="text-center text-primary">Login</h1>
+    <hr />
+  </div>
+  <div class="m-5 d-grid gap-3">
+    <div class="row">
+      <div class="form-floating">
+        <div class="form-floating">
+          <input
+            type="email"
+            class="form-control"
+            id="passengerEmail"
+            placeholder="Email"
+            formControlName="email"
+          />
+          <label for="passengerEmail" class="form-label text-primary">
+            Email
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-floating">
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <label for="password" class="form-label text-primary">
+            Enter Password
+          </label>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="loginForm.invalid"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</form>
